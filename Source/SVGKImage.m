@@ -86,7 +86,7 @@ static NSMutableDictionary* globalSVGKImageCache;
     
 #ifdef ENABLE_GLOBAL_IMAGE_CACHE_FOR_SVGKIMAGE_IMAGE_NAMED
     
-    NSLog(@"Cache enabled");
+    NSLog(@"Cache enabled updated");
     
     if( globalSVGKImageCache == nil )
     {
