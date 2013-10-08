@@ -142,8 +142,7 @@ static float cachedDevicePixelsPerInch;
 	
 	if( [platform hasPrefix:@"iPhone4"]
     || [platform hasPrefix:@"iPhone5"]
-    || [platform hasPrefix:@"iPhone5C"]
-    || [platform hasPrefix:@"iPhone5S"])
+    || [platform hasPrefix:@"iPhone6"])
 		return 326.0f;
 	
 	if( [platform hasPrefix:@"iPhone"]) // catch-all for higher-end devices not yet existing
