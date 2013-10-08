@@ -82,7 +82,12 @@ static NSMutableDictionary* globalSVGKImageCache;
 + (SVGKImage *)imageNamed:(NSString *)name {
 	NSParameterAssert(name != nil);
     
+    NSLog(@"Getting image");
+    
 #ifdef ENABLE_GLOBAL_IMAGE_CACHE_FOR_SVGKIMAGE_IMAGE_NAMED
+    
+    NSLog(@"Cache enabled");
+    
     if( globalSVGKImageCache == nil )
     {
         globalSVGKImageCache = [NSMutableDictionary new];
