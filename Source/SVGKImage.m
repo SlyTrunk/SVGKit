@@ -597,7 +597,7 @@ NSAssert( FALSE, @"Method unsupported / not yet implemented by SVGKit" );
 	NSLog(@"[%@] DEBUG: Generating an NSData* raw bytes image using the current root-object's viewport (may have been overridden by user code): {0,0,%2.3f,%2.3f}", [self class], self.size.width, self.size.height);
 	
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-	CGContextRef context = CGBitmapContextCreate( NULL/*malloc( self.size.width * self.size.height * 4 )*/, self.size.width, self.size.height, 8, 4 * self.size.width, colorSpace, kCGImageAlphaNoneSkipLast );
+	CGContextRef context = CGBitmapContextCreate( NULL/*malloc( self.size.width * self.size.height * 4 )*/, self.size.width, self.size.height, 8, 4 * self.size.width, colorSpace, (kCGBitmapAlphaInfoMask & kCGImageAlphaNoneSkipLast) );
 	CGColorSpaceRelease( colorSpace );
 	
 	[self renderToContext:context antiAliased:shouldAntialias curveFlatnessFactor:multiplyFlatness interpolationQuality:interpolationQuality flipYaxis: flipYaxis];
