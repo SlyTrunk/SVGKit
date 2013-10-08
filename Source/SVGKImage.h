@@ -48,6 +48,7 @@
 
 #define ENABLE_GLOBAL_IMAGE_CACHE_FOR_SVGKIMAGE_IMAGE_NAMED 0 // if ENABLED, then ALL instances created with imageNamed: are shared, and are NEVER RELEASED
 
+
 @class SVGDefsElement;
 
 @interface SVGKImage : NSObject // doesn't extend UIImage because Apple made UIImage immutable
