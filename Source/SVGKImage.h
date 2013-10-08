@@ -224,6 +224,12 @@
  */
 -(NSData*) exportNSDataAntiAliased:(BOOL) shouldAntialias curveFlatnessFactor:(CGFloat) multiplyFlatness interpolationQuality:(CGInterpolationQuality) interpolationQuality flipYaxis:(BOOL) flipYaxis;
 
+/**
+ Bdalziel to access lower level rendering parameters
+ */
+-(void) renderToContext:(CGContextRef) context antiAliased:(BOOL) shouldAntialias curveFlatnessFactor:(CGFloat) multiplyFlatness interpolationQuality:(CGInterpolationQuality) interpolationQuality flipYaxis:(BOOL) flipYaxis;
+
+
 #pragma mark - Useful bonus methods, will probably move to a different class at some point
 
 /** alters the SVG image's size directly (by changing the viewport) so that it will fit inside the specifed area without stretching or deforming */
